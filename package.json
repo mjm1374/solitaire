@@ -1,0 +1,33 @@
+{
+  "name": "solitaire",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.78.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjm1374/js-solitaire.git"
+  },
+  "keywords": [
+    "solitaire",
+    "js",
+    "soltaire"
+  ],
+  "author": "Mike McAllister",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjm1374/js-solitaire/issues"
+  },
+  "homepage": "https://github.com/mjm1374/js-solitaire#readme"
+}
