@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
 	entry: {
@@ -24,6 +25,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: path.join(__dirname, './src/template.html'),
 		}),
+		new DashboardPlugin(),
 	],
 	module: {
 		rules: [
