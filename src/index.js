@@ -3,7 +3,7 @@ import kat from './assets/kat.jpg';
 import './style.css';
 
 const title = document.createElement('h3');
-title.textContent = 'JS-Solitaire';
+title.textContent = 'JS-Solitaire!!!';
 
 const page = document.querySelector('body');
 page.append(title);
