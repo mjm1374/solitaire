@@ -9,17 +9,17 @@ module.exports = {
 		path: path.resolve(__dirname, 'build'),
 		filename: '[name].bundle.js',
 	},
-	watch: true,
-	watchOptions: {
-		aggregateTimeout: 600,
-	},
 	devServer: {
 		static: {
-			directory: path.join(__dirname, 'public'),
+			directory: path.join(__dirname, 'build'),
 		},
-		compress: true,
 		port: 9000,
+		hot: true,
+		client: {
+			logging: 'info',
+		},
 	},
+	mode: 'development',
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: path.join(__dirname, './src/template.html'),
