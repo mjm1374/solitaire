@@ -14,9 +14,19 @@ const state = {
 	],
 };
 
+//let dealerDeck = [];
+let piles = [[], [], [], [], [], [], []];
+let aces = [[], [], [], []];
+
+function shuffleDeck(array) {
+	for (let i = array.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[array[i], array[j]] = [array[j], array[i]];
+	}
+}
+
 const inititateDeck = () => {
 	state.cards = [];
-
 	// create all cards
 	for (let i = 0; i < 4; i++) {
 		for (let j = 1; j <= 13; j++) {
@@ -27,16 +37,19 @@ const inititateDeck = () => {
 				'card--back'
 			);
 
-			const newCard = new Card(j, state.suit[i], el, false);
-			state.cards.push(newCard);
+			state.cards.push(new Card(j, state.suit[i], el, false));
 		}
 	}
+
+	shuffleDeck(state.cards);
 };
+
+//  game play
 
 inititateDeck();
 
 console.log(state.cards);
 
 if (module.hot) {
-	module.hot.accept();
+	//module.hot.accept();
 }
