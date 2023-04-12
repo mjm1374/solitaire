@@ -12,11 +12,26 @@ const state = {
 	cards: [
 		// {  number: 0, suit: 's', el: null, facingUp: false }, {...}
 	],
-};
+	// hand & discard pile
+	dealer: {
+		hand: {
+			el: null,
+			cards: [
+				/* 0, 1, ... */
+			],
+		},
+		pile: {
+			el: null,
+			cards: [
+				/* 0, 1, ... */
+			],
+		},
+	},
 
-//let dealerDeck = [];
-let piles = [[], [], [], [], [], [], []];
-let aces = [[], [], [], []];
+	board: [
+		// { el: null, cards: [ 0, 1, ... ]}, {...} - array of obj's with card indexes
+	],
+};
 
 function shuffleDeck(array) {
 	for (let i = array.length - 1; i > 0; i--) {
@@ -48,7 +63,14 @@ const inititateDeck = () => {
 
 inititateDeck();
 
-console.log(state.cards);
+console.log('state', state.cards);
+
+dealerDeck = [...state.cards];
+
+dealerDeck.pop();
+
+console.log('deck', dealerDeck);
+console.log('state', state.cards);
 
 if (module.hot) {
 	//module.hot.accept();
